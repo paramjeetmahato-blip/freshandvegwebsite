@@ -1,174 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Products | Fresh & Veg</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-<header class="site-header">
-  <a class="brand" href="index.html">🥬 fresh<span>&</span>veg</a>
-  <button class="menu-toggle" aria-label="Open menu">☰</button>
-  <nav class="nav">
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a class="active" href="products.html">Products</a>
-    <a href="offers.html">Offers</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-  <a class="cart-link" href="#cart">🛒 <span id="cart-count">0</span></a>
-</header>
-<main>
-  <section class="page-hero compact">
-    <span class="eyebrow">THE FRESH MARKET</span>
-    <h1>Our <em>products</em></h1>
-    <p>Everyday fruits and vegetables for a fresher kitchen.</p>
-  </section>
-  <section class="section">
-    <div class="filter-row">
-      <h2>Shop fresh veggies & fruits</h2>
-      <div>
-        <button class="filter active" data-filter="all">All</button>
-        <button class="filter" data-filter="fruit">Fruits</button>
-        <button class="filter" data-filter="vegetable">Vegetables</button>
-        <button class="filter" data-filter="seasonal">Seasonal</button>
-        <button class="filter" data-filter="organic">Organic</button>
-        <button class="filter" data-filter="local">Local</button>
-        <button class="filter" data-filter="imported">Imported</button>
-        <button class="filter" data-filter="bulk">Bulk</button>
-        <button class="filter" data-filter="offers">Offers</button>
-        <button class="filter" data-filter="MIx Salad">Salad</button>
-      </div>
-    </div>
-    <div class="product-grid" id="all-products">
-      <article class="product-card" data-category="vegetable">
-        <div class="product-photo photo-tomato"></div>
-        <div class="product-info">
-          <span class="tag">VEGETABLE</span>
-          <h3>Fresh Tomatoes</h3>
-          <div class="price">₹40 <small>/ 500g</small></div>
-          <button class("add-btn", data-product="Fresh Tomatoes");}>Add to cart +</button>
-        </div>
-      </article>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Products | Fresh & Veg</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header class="site-header">
+            <a class="brand" href="index.html">🥬 fresh<span>&</span>veg</a>
+            <button class="menu-toggle" aria-label="Open menu">☰</button>
+            <nav class="nav">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a class="active" href="products.html">Products</a>
+                <a href="offers.html">Offers</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <a class="cart-link" href="#cart">🛒 <span id="cart-count">0</span></a>
+        </header>
+        <main>
+            <section class="page-hero compact">
+                <span class="eyebrow">THE FRESH MARKET</span>
+                <h1>Our <em>products</em></h1>
+                <p>Everyday fruits and vegetables for a fresher kitchen.</p>
+            </section>
+            <section class="section">
+                <div class="filter-row">
+                    <h2>Shop favourites</h2>
+                    <div>
+                        <button class="filter active" data-filter="all">All</button>
+                        <button class="filter" data-filter="fruit">Fruits</button>
+                        <button class="filter" data-filter="vegetable">Vegetables</button>
+                    </div>
+                </div>
+                <div class="product-grid" id="all-products">
+                    <article class="product-card" data-category="vegetable">
+                        <div class="product-photo photo-tomato"></div>
+                        <div class="product-info">
+                            <span class="tag">VEGETABLE</span>
+                            <h3>Fresh Tomatoes</h3>
+                            <div class="price">₹40 <small>/ 500g</small></div>
+                            <button class="add-btn" data-product="Fresh Tomatoes">Add to cart +</button>
+                        </div>
+                    </article>
 <article class="product-card" data-category="fruit">
-    <div class="product-photo photo-orange"></div>
-    <div class="product-info"><span class="tag">FRUIT</span>
-        <h3>Juicy Oranges</h3>
-        <div class="price">₹60 <small>/ 1kg</small></div>
-        <button class="add-btn" data-product="Juicy Oranges">Add to cart +</button>
+    <div class="product-photo photo-orange">      
+    </div>
+    <div class="product-info"><span class="tag">FRUIT</span><h3>Juicy Oranges</h3><div class="price">₹60 <small>/ 1kg</small></div><button class="add-btn" data-product="Juicy Oranges">Add to cart +
+        
+    </button>
 </div>
 </article>
-<article class="product-card" data-category="vegetable">
-    <div class="product-photo photo-carrot"></div>
-    <div class="product-info">
-      <span class="tag">VEGETABLE</span>
-      <h3>Crunchy Carrots</h3>
-      <div class="price">₹35 <small>/ 500g</small></div>
-      <button class="add-btn" data-product="Crunchy Carrots">Add to cart +</button>
-    </div>
-  </article>
-<article class="product-card" data-category="fruit">
-  <div class="product-photo photo-apple"></div>
-  <div class="product-info">
-    <span class="tag">FRUIT</span>
-    <h3>Red Apples</h3>
-    <div class="price">₹120 <small>/ 1kg</small></div>
-    <button class="add-btn" data-product="Red Apples">Add to cart +</button>
-  </div>
-</article>
-<article class="product-card" data-category="seasonal">
-  <div class="product-photo photo-spinach"></div>
-  <div class="product-info">
-    <span class="tag">SEASONAL</span>
-    <h3>Fresh Spinach</h3>
-    <div class="price">₹30 <small>/ bunch</small></div>
-    <button class="add-btn" data-product="Fresh Spinach">Add to cart +</button>
-  </div>
-</article>
-<article class="product-card" data-category="fruit">
-  <div class="product-photo photo-banana"></div>
-  <div class="product-info">
-    <span class="tag">FRUIT</span>
-    <h3>Ripe Bananas</h3>
-    <div class="price">₹50 <small>/ 1kg</small></div>
-    <button class="add-btn" data-product="Ripe Bananas">Add to cart +</button>
-  </div>
-</article>
-<article class="product-card" data-category="organic">
-  <div class="product-photo photo-broccoli"></div>
-  <div class="product-info">
-    <span class="tag">ORGANIC</span>
-    <h3>Organic Broccoli</h3>
-    <div class="price">₹80 <small>/ 500g</small></div>
-    <button class="add-btn" data-product="Organic Broccoli">Add to cart +</button>
-  </div>
-</article>
-<article class="product-card" data-category="local">
-  <div class="product-photo photo-cucumber"></div>
-  <div class="product-info">
-    <span class="tag">LOCAL</span>
-    <h3>Local Cucumbers</h3>
-    <div class="price">₹25 <small>/ 500g</small></div>
-    <button class="add-btn" data-product="Local Cucumbers">Add to cart +</button>
-  </div>
-</article>
-<article class="product-card" data-category="imported">
-  <div class="product-photo photo-avocado"></div>
-  <div class="product-info">
-    <span class="tag">IMPORTED</span>
-    <h3>Imported Avocados</h3>
-    <div class="price">₹150 <small>/ 500g</small></div>
-    <button class="add-btn" data-product="Imported Avocados">Add to cart +</button>
-  </div>
-</article>
-<article class="product-card" data-category="bulk">
-  <div class="product-photo photo-potato"></div>
-  <div class="product-info">
-    <span class="tag">BULK</span> 
-    <h3>Organic Potatoes</h3>
-    <div class="price">₹40 <small>/ 1kg</small></div>
-    <button class="add-btn" data-product="Organic Potatoes">Add to cart +</button>
-  </div>
-</article>
-<article class="product-card" data-category="offers">
-  <div class="product-photo photo-strawberry"></div>
-  <div class="product-info">
-    <span class="tag">OFFERS</span>
-    <h3>Fresh Strawberries</h3>
-    <div class="price">₹90 <small>/ 500g</small></div>
-    <button class="add-btn" data-product="Fresh Strawberries">Add to cart +</button>
-  </div>
-</article>
-    </div>
-  </section>
-  <section class="section">
-    <div class="section-heading">
-      <div>
-        <span class="eyebrow">CUSTOMER FAVORITES</span>
-        <h2>Top picks for you</h2>
-      </div>
-      <a class="text-link" href="products.html">View all products →</a>
-    </div>
-    <div class="product-grid">
-      <article class="product-card">
-        <div class="product-photo photo-tomato"></div>
-        <div class="product-info">
-          <span class="tag">VEGETABLE</span>
-          <h3>Fresh Tomatoes</h3>
-          <div class="price">₹40 <small>/ 500g</small></div
-<div class="cart-panel" id="cart">
-  <h2>Your basket</h2>
-  <p id="cart-items">Your basket is empty. Add some fresh picks!</p>
-  <a class="btn btn-primary" id="order-whatsapp" href="#">Order on WhatsApp</a>
-  <small class="hint">Demo prices: update them to match your shop. WhatsApp ordering needs your number in script.js.</small>
-</div>
-</section>
-</main>
-<footer class="footer">
-  <a class="brand" href="index.html">🥬 fresh<span>&</span>veg</a>
-  <small>© 2026 Fresh & Veg.</small>
-</footer>
-<script src="script.js"></script>
-</body>
-</html>
+<article class="product-card" data-category="vegetable"><div class="product-photo photo-carrot"></div><div class="product-info"><span class="tag">VEGETABLE</span><h3>Crunchy Carrots</h3><div class="price">₹35 <small>/ 500g</small></div><button class="add-btn" data-product="Crunchy Carrots">Add to cart +</button></div></article>
+<article class="product-card" data-category="fruit"><div class="product-photo photo-apple"></div><div class="product-info"><span class="tag">FRUIT</span><h3>Red Apples</h3><div class="price">₹120 <small>/ 1kg</small></div><button class="add-btn" data-product="Red Apples">Add to cart +</button></div></article>
+</div><div class="cart-panel" id="cart"><h2>Your basket</h2><p id="cart-items">Your basket is empty. Add some fresh picks!</p><a class="btn btn-primary" id="order-whatsapp" href="#">Order on WhatsApp</a><small class="hint">Demo prices: update them to match your shop. WhatsApp ordering needs your number in script.js.</small></div></section></main><footer class="footer"><a class="brand" href="index.html">🥬 fresh<span>&</span>veg</a><small>© 2026 Fresh & Veg.</small></footer><script src="script.js"></script></body></html>
