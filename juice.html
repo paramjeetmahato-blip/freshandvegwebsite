@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fresh Juices | Fresh & Veg</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="products.css">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container header-container">
+        <a href="index.html" class="logo">fresh<span>&</span>veg</a>
+        <nav class="main-nav">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="products.html">Products</a>
+            <a href="cart.html">Cart 🛒</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </div>
+</header>
+
+<div class="category-nav">
+    <div class="container category-nav-inner">
+        <a href="products.html">All Products</a>
+        <a href="fruits.html">🍎 Fruits</a>
+        <a href="vegetables.html">🥦 Vegetables</a>
+        <a href="salad.html">🥗 Salad</a>
+        <a href="juice.html" class="active">🧃 Juice</a>
+        <a href="offers.html">🔥 Offers</a>
+    </div>
+</div>
+
+<section class="products-hero">
+    <div class="container">
+        <h1>Fresh & Natural Juices 🧃</h1>
+        <p>Refreshing juices made from delicious fruits.</p>
+    </div>
+</section>
+
+<section class="all-products-section">
+    <div class="container">
+
+        <div class="section-heading">
+            <h2>Our Juice Collection</h2>
+            <p>Freshness in every sip.</p>
+        </div>
+
+        <div class="products-grid">
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1600271886742-f049cd451bba?w=500" alt="Orange Juice">
+                </div>
+                <div class="product-info">
+                    <span class="product-category">Fresh Juice</span>
+                    <h3>Orange Juice</h3>
+                    <p class="product-price">₹50 <small>/ 250 ml</small></p>
+                    <button onclick="addToCart('Orange Juice',50,'250 ml')">Add to Cart +</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1576673442511-7e39b6545c87?w=500" alt="Apple Juice">
+                </div>
+                <div class="product-info">
+                    <span class="product-category">Fresh Juice</span>
+                    <h3>Apple Juice</h3>
+                    <p class="product-price">₹60 <small>/ 250 ml</small></p>
+                    <button onclick="addToCart('Apple Juice',60,'250 ml')">Add to Cart +</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1525385133512-2f3bdd039054?w=500" alt="Watermelon Juice">
+                </div>
+                <div class="product-info">
+                    <span class="product-category">Summer Juice</span>
+                    <h3>Watermelon Juice</h3>
+                    <p class="product-price">₹40 <small>/ 250 ml</small></p>
+                    <button onclick="addToCart('Watermelon Juice',40,'250 ml')">Add to Cart +</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1601493700631-2b16ec4b4716?w=500" alt="Mango Juice">
+                </div>
+                <div class="product-info">
+                    <span class="product-category">Seasonal Juice</span>
+                    <h3>Mango Juice</h3>
+                    <p class="product-price">₹55 <small>/ 250 ml</small></p>
+                    <button onclick="addToCart('Mango Juice',55,'250 ml')">Add to Cart +</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1546173159-315724a31696?w=500" alt="Pineapple Juice">
+                </div>
+                <div class="product-info">
+                    <span class="product-category">Fresh Juice</span>
+                    <h3>Pineapple Juice</h3>
+                    <p class="product-price">₹50 <small>/ 250 ml</small></p>
+                    <button onclick="addToCart('Pineapple Juice',50,'250 ml')">Add to Cart +</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1603569283847-aa295f0d016a?w=500" alt="Pomegranate Juice">
+                </div>
+                <div class="product-info">
+                    <span class="product-category">Healthy Juice</span>
+                    <h3>Pomegranate Juice</h3>
+                    <p class="product-price">₹70 <small>/ 250 ml</small></p>
+                    <button onclick="addToCart('Pomegranate Juice',70,'250 ml')">Add to Cart +</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<footer class="site-footer">
+    <div class="container">
+        <p>© 2026 Fresh & Veg. All Rights Reserved.</p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+```
+<meta name="description" content="Buy fresh apples, bananas, oranges, mangoes and other seasonal fruits online at Fresh & Veg.">
+
+<title>Fresh Fruits | Fresh & Veg</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="fruits.css">
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+```
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header class="site-header">
+
+```
+<a class="brand" href="index.html">
+    <span class="brand-icon">🥬</span>
+    fresh<span>&</span>veg
+</a>
+
+<div class="header-search">
+    <input type="search" id="fruitSearch" placeholder="Search fruits...">
+    <button type="button" onclick="searchFruits()">Search</button>
+</div>
+
+<button class="menu-toggle" aria-label="Open menu"
+    aria-expanded="false">☰</button>
+
+<a class="cart-link" href="cart.html">
+    🛒 Cart <span id="cart-count">0</span>
+</a>
+```
+
+</header>
+
+<!-- SHOPPING NAVIGATION -->
+
+<nav class="category-navbar">
+
+```
+<div class="category-links">
+    <a href="products.html">All Products</a>
+    <a class="active" href="fruits.html">🍎 Fruits</a>
+    <a href="vegetables.html">🥦 Vegetables</a>
+    <a href="salad.html">🥗 Salad</a>
+    <a href="juice.html">🧃 Juice</a>
+    <a href="offers.html">🔥 Special Offers</a>
+</div>
+```
+
+</nav>
+
+<!-- INFORMATION NAVIGATION -->
+
+<nav class="info-navbar">
+
+```
+<div class="nav">
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="product.html">Product Details</a>
+    <a href="cart.html">Shopping Cart</a>
+    <a href="checkout.html">Checkout</a>
+    <a href="login.html">Login</a>
+    <a href="signup.html">Signup</a>
+    <a href="orders.html">My Orders</a>
+    <a href="contact.html">Contact Us</a>
+</div>
+```
+
+</nav>
+
+<main>
+
+<!-- FRUITS HERO -->
+
+<section class="fruit-hero">
+
+```
+<div class="fruit-hero-content">
+
+    <span class="eyebrow">FRESHNESS FROM NATURE</span>
+
+    <h1>
+        Nature's Sweetness,
+        <em>Delivered Fresh.</em>
+    </h1>
+
+    <p>
+        Discover delicious, fresh and seasonal fruits.
+        Choose your favourites and enjoy healthy eating
+        every day.
+    </p>
+
+    <a href="#fruit-products" class="btn btn-primary">
+        Shop Fresh Fruits →
+    </a>
+
+</div>
+
+<div class="fruit-hero-image">
+    <img src="https://images.unsplash.com/photo-1610832958506-aa56368176cf?w=900"
+         alt="Fresh colourful fruits">
+</div>
+```
+
+</section>
+
+<!-- FRUIT BENEFITS -->
+
+<section class="fruit-benefits">
+
+```
+<div>
+    <span>🍎</span>
+    <p><b>Fresh Fruits</b><small>Daily fruit selection</small></p>
+</div>
+
+<div>
+    <span>🌿</span>
+    <p><b>Quality Focus</b><small>Carefully selected</small></p>
+</div>
+
+<div>
+    <span>🚚</span>
+    <p><b>Home Delivery</b><small>Order from home</small></p>
+</div>
+
+<div>
+    <span>💚</span>
+    <p><b>Healthy Choice</b><small>Enjoy natural goodness</small></p>
+</div>
+```
+
+</section>
+
+<!-- FRUIT PRODUCTS -->
+
+<section class="section" id="fruit-products">
+
+```
+<div class="section-heading">
+
+    <div>
+        <span class="eyebrow">OUR FRUIT COLLECTION</span>
+        <h2>Shop Fresh Fruits</h2>
+        <p>Choose your favourite fruits at great prices.</p>
+    </div>
+
+</div>
+
+
+<!-- FILTERS -->
+<div class="fruit-filters">
+
+    <button class="filter-btn active" onclick="filterFruits('all', this)">All Fruits</button>
+
+    <button class="filter-btn" onclick="filterFruits('citrus', this)">Citrus</button>
+
+    <button class="filter-btn" onclick="filterFruits('tropical', this)">Tropical</button>
+
+    <button class="filter-btn" onclick="filterFruits('seasonal', this)">Seasonal</button>
+
+</div>
+
+
+<!-- PRODUCT GRID -->
+<div class="fruit-grid" id="fruitGrid">
+
+
+    <!-- APPLE -->
+    <article class="fruit-card" data-category="seasonal" data-name="apple">
+
+        <div class="fruit-photo">
+            <img src="https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6?w=500" alt="Fresh Apple">
+            <span class="fruit-badge">Popular</span>
+        </div>
+
+        <div class="fruit-info">
+
+            <span class="tag">FRESH FRUIT</span>
+            <h3>Fresh Red Apple</h3>
+            <p>Crisp and naturally sweet apples.</p>
+
+            <div class="fruit-price">₹120 <small>/ 1kg</small></div>
+
+            <select class="weight-select">
+                <option value="0">500g - ₹60</option>
+                <option value="1">1kg - ₹120</option>
+                <option value="2">2kg - ₹240</option>
+            </select>
+
+            <div class="fruit-actions">
+
+                <div class="quantity">
+                    <button onclick="changeQty(this,-1)">−</button>
+                    <input type="number" value="1" min="1" max="20">
+                    <button onclick="changeQty(this,1)">+</button>
+                </div>
+
+                <button class="add-btn"
+                    onclick="addFruit(this,'Fresh Red Apple',[60,120,240])">
+                    Add +
+                </button>
+
+            </div>
+
+        </div>
+
+    </article>
+
+
+    <!-- BANANA -->
+    <article class="fruit-card" data-category="tropical" data-name="banana">
+
+        <div class="fruit-photo">
+            <img src="https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?w=500" alt="Fresh Banana">
+        </div>
+
+        <div class="fruit-info">
+
+            <span class="tag">FRESH FRUIT</span>
+            <h3>Fresh Banana</h3>
+            <p>Soft and naturally sweet bananas.</p>
+
+            <div class="fruit-price">₹50 <small>/ 1kg</small></div>
+
+            <select class="weight-select">
+                <option value="0">500g - ₹25</option>
+                <option value="1">1kg - ₹50</option>
+                <option value="2">2kg - ₹100</option>
+            </select>
+
+            <div class="fruit-actions">
+
+                <div class="quantity">
+                    <button onclick="changeQty(this,-1)">−</button>
+                    <input type="number" value="1" min="1" max="20">
+                    <button onclick="changeQty(this,1)">+</button>
+                </div>
+
+                <button class="add-btn"
+                    onclick="addFruit(this,'Fresh Banana',[25,50,100])">
+                    Add +
+                </button>
+
+            </div>
+
+        </div>
+
+    </article>
+
+
+    <!-- ORANGE -->
+    <article class="fruit-card" data-category="citrus" data-name="orange">
+
+        <div class="fruit-photo">
+            <img src="https://images.unsplash.com/photo-1547514701-42782101795e?w=500" alt="Fresh Orange">
+        </div>
+
+        <div class="fruit-info">
+
+            <span class="tag">CITRUS FRUIT</span>
+            <h3>Juicy Orange</h3>
+            <p>Refreshing and juicy oranges.</p>
+
+            <div class="fruit-price">₹80 <small>/ 1kg</small></div>
+
+            <select class="weight-select">
+                <option value="0">500g - ₹40</option>
+                <option value="1">1kg - ₹80</option>
+                <option value="2">2kg - ₹160</option>
+            </select>
+
+            <div class="fruit-actions">
+
+                <div class="quantity">
+                    <button onclick="changeQty(this,-1)">−</button>
+                    <input type="number" value="1" min="1" max="20">
+                    <button onclick="changeQty(this,1)">+</button>
+                </div>
+
+                <button class="add-btn"
+                    onclick="addFruit(this,'Juicy Orange',[40,80,160])">
+                    Add +
+                </button>
+
+            </div>
+
+        </div>
+
+    </article>
+
+
+    <!-- MANGO -->
+    <article class="fruit-card" data-category="tropical" data-name="mango">
+
+        <div class="fruit-photo">
+            <img src="https://images.unsplash.com/photo-1553279768-865429fa0078?w=500" alt="Fresh Mango">
+        </div>
+
+        <div class="fruit-info">
+
+            <span class="tag">TROPICAL FRUIT</span>
+            <h3>Fresh Mango</h3>
+            <p>Delicious mangoes for fruit lovers.</p>
+
+            <div class="fruit-price">₹100 <small>/ 1kg</small></div>
+
+            <select class="weight-select">
+                <option value="0">500g - ₹50</option>
+                <option value="1">1kg - ₹100</option>
+                <option value="2">2kg - ₹200</option>
+            </select>
+
+            <div class="fruit-actions">
+
+                <div class="quantity">
+                    <button onclick="changeQty(this,-1)">−</button>
+                    <input type="number" value="1" min="1" max="20">
+                    <button onclick="changeQty(this,1)">+</button>
+                </div>
+
+                <button class="add-btn"
+                    onclick="addFruit(this,'Fresh Mango',[50,100,200])">
+                    Add +
+                </button>
+
+            </div>
+
+        </div>
+
+    </article>
+
+
+    <!-- GRAPES -->
+    <article class="fruit-card" data-category="seasonal" data-name="grapes">
+
+        <div class="fruit-photo">
+            <img src="https://images.unsplash.com/photo-1537640538966-79f369143f8f?w=500" alt="Fresh Grapes">
+        </div>
+
+        <div class="fruit-info">
+
+            <span class="tag">FRESH FRUIT</span>
+            <h3>Fresh Grapes</h3>
+            <p>Sweet and juicy fresh grapes.</p>
+
+            <div class="fruit-price">₹90 <small>/ 1kg</small></div>
+
+            <select class="weight-select">
+                <option value="0">500g - ₹45</option>
+                <option value="1">1kg - ₹90</option>
+                <option value="2">2kg - ₹180</option>
+            </select>
+
+            <div class="fruit-actions">
+
+                <div class="quantity">
+                    <button onclick="changeQty(this,-1)">−</button>
+                    <input type="number" value="1" min="1" max="20">
+                    <button onclick="changeQty(this,1)">+</button>
+                </div>
+
+                <button class="add-btn"
+                    onclick="addFruit(this,'Fresh Grapes',[45,90,180])">
+                    Add +
+                </button>
+
+            </div>
+
+        </div>
+
+    </article>
+
+
+    <!-- PAPAYA -->
+    <article class="fruit-card" data-category="tropical" data-name="papaya">
+
+        <div class="fruit-photo">
+            <img src="https://images.unsplash.com/photo-1517282009859-f000ec3b26fe?w=500" alt="Fresh Papaya">
+        </div>
+
+        <div class="fruit-info">
+
+            <span class="tag">TROPICAL FRUIT</span>
+            <h3>Fresh Papaya</h3>
+            <p>Soft and delicious papaya.</p>
+
+            <div class="fruit-price">₹50 <small>/ 1kg</small></div>
+
+            <select class="weight-select">
+                <option value="0">500g - ₹25</option>
+                <option value="1">1kg - ₹50</option>
+                <option value="2">2kg - ₹100</option>
+            </select>
+
+            <div class="fruit-actions">
+
+                <div class="quantity">
+                    <button onclick="changeQty(this,-1)">−</button>
+                    <input type="number" value="1" min="1" max="20">
+                    <button onclick="changeQty(this,1)">+</button>
+                </div>
+
+                <button class="add-btn"
+                    onclick="addFruit(this,'Fresh Papaya',[25,50,100])">
+                    Add +
+                </button>
+
+            </div>
+
+        </div>
+
+    </article>
+
+
+    <!-- PINEAPPLE -->
+    <article class="fruit-card" data-category="tropical" data-name="pineapple">
+
+        <div class="fruit-photo">
+            <img src="https://images.unsplash.com/photo-1550258987-190a2d41a8ba?w=500" alt="Fresh Pineapple">
+        </div>
+
+        <div class="fruit-info">
+
+            <span class="tag">TROPICAL FRUIT</span>
+            <h3>Fresh Pineapple</h3>
+            <p>Tangy and refreshing pineapple.</p>
+
+            <div class="fruit-price">₹70 <small>/ 1 piece</small></div>
+
+            <select class="weight-select">
+                <option value="0">1 Piece - ₹70</option>
+                <option value="1">2 Pieces - ₹140</option>
+            </select>
+
+            <div class="fruit-actions">
+
+                <div class="quantity">
+                    <button onclick="changeQty(this,-1)">−</button>
+                    <input type="number" value="1" min="1" max="20">
+                    <button onclick="changeQty(this,1)">+</button>
+                </div>
+
+                <button class="add-btn"
+                    onclick="addFruit(this,'Fresh Pineapple',[70,140])">
+                    Add +
+                </button>
+
+            </div>
+
+        </div>
+
+    </article>
+
+
+    <!-- WATERMELON -->
+    <article class="fruit-card" data-category="seasonal" data-name="watermelon">
+
+        <div class="fruit-photo">
+            <img src="https://images.unsplash.com/photo-1563114773-84221bd62daa?w=500" alt="Fresh Watermelon">
+        </div>
+
+        <div class="fruit-info">
+
+            <span class="tag">SEASONAL FRUIT</span>
+            <h3>Fresh Watermelon</h3>
+            <p>Refreshing and juicy watermelon.</p>
+
+            <div class="fruit-price">₹40 <small>/ 1kg</small></div>
+
+            <select class="weight-select">
+                <option value="0">500g - ₹20</option>
+                <option value="1">1kg - ₹40</option>
+                <option value="2">2kg - ₹80</option>
+            </select>
+
+            <div class="fruit-actions">
+
+                <div class="quantity">
+                    <button onclick="changeQty(this,-1)">−</button>
+                    <input type="number" value="1" min="1" max="20">
+                    <button onclick="changeQty(this,1)">+</button>
+                </div>
+
+                <button class="add-btn"
+                    onclick="addFruit(this,'Fresh Watermelon',[20,40,80])">
+                    Add +
+                </button>
+
+            </div>
+
+        </div>
+
+    </article>
+
+</div>
+
+<p id="no-results" hidden>No fruits found. Try another search.</p>
+```
+
+</section>
+
+<!-- FRUIT CTA -->
+
+<section class="fruit-cta">
+
+```
+<h2>Enjoy Nature's Freshness!</h2>
+
+<p>
+    Choose your favourite fruits and bring healthy
+    goodness to your everyday life.
+</p>
+
+<a href="products.html" class="btn btn-primary">
+    Explore All Products →
+</a>
+```
+
+</section>
+
+</main>
+
+<!-- FOOTER -->
+
+<footer class="footer">
+
+```
+<a class="brand" href="index.html">
+    🥬 fresh<span>&</span>veg
+</a>
+
+<p>Fresh choices. Healthy living.</p>
+
+<div>
+    <a href="about.html">About Us</a>
+    <a href="products.html">Products</a>
+    <a href="offers.html">Offers</a>
+    <a href="contact.html">Contact</a>
+</div>
+
+<small>© 2026 Fresh & Veg. All Rights Reserved.</small>
+```
+
+</footer>
+
+<script src="script.js"></script>
+
+<script src="fruits.js"></script>
+
+</body>
+</html>

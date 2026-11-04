@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fresh Salads | Fresh & Veg</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="products.css">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container header-container">
+        <a href="index.html" class="logo">fresh<span>&</span>veg</a>
+        <nav class="main-nav">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="products.html">Products</a>
+            <a href="cart.html">Cart 🛒</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </div>
+</header>
+
+<div class="category-nav">
+    <div class="container category-nav-inner">
+        <a href="products.html">All Products</a>
+        <a href="fruits.html">🍎 Fruits</a>
+        <a href="vegetables.html">🥦 Vegetables</a>
+        <a href="mixsalad.html" class="active">🥗 Salad</a>
+        <a href="juice.html">🧃 Juice</a>
+        <a href="offers.html">🔥 Offers</a>
+    </div>
+</div>
+
+<section class="products-hero">
+    <div class="container">
+        <h1>Fresh & Healthy Salads 🥗</h1>
+        <p>Enjoy fresh, delicious and healthy salads every day.</p>
+    </div>
+</section>
+
+<section class="all-products-section">
+    <div class="container">
+
+        <div class="section-heading">
+            <h2>Our Salad Collection</h2>
+            <p>Healthy food for a healthy life.</p>
+        </div>
+
+        <div class="products-grid">
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=500" alt="Green Salad">
+                </div>
+                <div class="product-info">
+                    <span class="product-category">Healthy Salad</span>
+                    <h3>Green Salad</h3>
+                    <p class="product-price">₹60 <small>/ 250 g</small></p>
+                    <button onclick="addToCart('Green Salad',60,'250 g')">Add to Cart +</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1490474418585-ba9bad8fd0ea?w=500" alt="Fruit Salad">
+                </div>
+                <div class="product-info">
+                    <span class="product-category">Fruit Salad</span>
+                    <h3>Fresh Fruit Salad</h3>
+                    <p class="product-price">₹80 <small>/ 250 g</small></p>
+                    <button onclick="addToCart('Fresh Fruit Salad',80,'250 g')">Add to Cart +</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?w=500" alt="Vegetable Salad">
+                </div>
+                <div class="product-info">
+                    <span class="product-category">Vegetable Salad</span>
+                    <h3>Vegetable Salad</h3>
+                    <p class="product-price">₹50 <small>/ 250 g</small></p>
+                    <button onclick="addToCart('Vegetable Salad',50,'250 g')">Add to Cart +</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1551248429-40975aa4de74?w=500" alt="Cucumber Salad">
+                </div>
+                <div class="product-info">
+                    <span class="product-category">Fresh Salad</span>
+                    <h3>Cucumber Salad</h3>
+                    <p class="product-price">₹35 <small>/ 250 g</small></p>
+                    <button onclick="addToCart('Cucumber Salad',35,'250 g')">Add to Cart +</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1515543904379-3d757afe72e4?w=500" alt="Corn Salad">
+                </div>
+                <div class="product-info">
+                    <span class="product-category">Special Salad</span>
+                    <h3>Sweet Corn Salad</h3>
+                    <p class="product-price">₹70 <small>/ 250 g</small></p>
+                    <button onclick="addToCart('Sweet Corn Salad',70,'250 g')">Add to Cart +</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1511690743698-d9d85f2fbf38?w=500" alt="Sprouts Salad">
+                </div>
+                <div class="product-info">
+                    <span class="product-category">Healthy Salad</span>
+                    <h3>Sprouts Salad</h3>
+                    <p class="product-price">₹65 <small>/ 250 g</small></p>
+                    <button onclick="addToCart('Sprouts Salad',65,'250 g')">Add to Cart +</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<footer class="site-footer">
+    <div class="container">
+        <p>© 2026 Fresh & Veg. All Rights Reserved.</p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

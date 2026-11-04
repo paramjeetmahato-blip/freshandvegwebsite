@@ -1,90 +1,622 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Fresh & Veg - fresh fruits and vegetables delivered to your home.">
-  <title>Fresh & Veg | Farm Fresh, Every Day</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Fresh & Veg - Buy fresh fruits and vegetables online with fast home delivery.">
+
+    <title>Fresh & Veg | Fresh Fruits & Vegetables</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="products.css">
 </head>
+
 <body>
-<header class="site-header"><a class="brand" href="index.html"><span class="brand-icon">🥬</span> fresh<span>&</span>veg</a>
-<button class="menu-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
-<nav class="nav">
-  <a class="active" href="index.html">Home</a>
-  <a href="about.html">About</a>
-  <a href="products.html">Products</a>
-  <a href="offers.html">Offers</a>
-  <a href="contact.html">Contact</a>
-</nav>
-<a class="cart-link" href="products.html">🛒 <span id="cart-count">0</span></a>
-</header>
-<main>
-<section class="hero">
-  <div class="hero-content">
-    <span class="eyebrow">FRESH FROM FARM TO YOUR HOME</span>
-    <h1>Eat fresh.<br><em>Live healthy.</em></h1>
-    <p>Handpicked fruits and vegetables, full of goodness and delivered fresh to your doorstep.</p>
-    <div class="hero-actions">
-      <a class="btn btn-primary" href="products.html">Shop now <span>→</span></a><a class="text-link" href="about.html">Discover our story</a>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="site-header">
+
+        <div class="container header-container">
+
+            <a href="index.html" class="logo">
+                Fresh<span>&</span>Veg.
+            </a>
+
+            <nav class="main-nav">
+
+                <a href="index.html" class="active">Home</a>
+                <a href="about.html">About</a>
+                <a href="products.html">Products</a>
+                <a href="offers.html">Offers</a>
+                <a href="contact.html">Contact</a>
+
+                <a href="login.html">Login</a>
+
+                <a href="cart.html" class="cart-link">
+                    🛒 Cart (<span id="cartCount">0</span>)
+                </a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= CATEGORY NAVIGATION ================= -->
+
+    <div class="category-nav">
+
+        <div class="container category-container">
+
+            <a href="products.html">All Products</a>
+            <a href="fruits.html">🍎 Fruits</a>
+            <a href="vegetables.html">🥦 Vegetables</a>
+            <a href="salad.html">🥗 Salad</a>
+            <a href="juice.html">🥤 Fresh Juice</a>
+            <a href="offers.html">🔥 Special Offers</a>
+
+        </div>
+
     </div>
-    <div class="hero-trust">
-      <span>✓ Freshly picked</span>
-      <span>✓ Quality checked</span>
-      <span>✓ Easy ordering</span>
-    </div>
-  </div>
-  <div class="hero-visual">
-    <div class="hero-image"></div>
-    <div class="fresh-badge">
-      <strong>100%</strong>
-      <small>FRESHNESS<br>GUARANTEED</small>
-    </div>
-    <div class="floating-note">🌱 Good food, good mood!</div>
-  </div>
-</section>
-<section class="benefits">
-  <div><span>🚚</span><p><b>Quick delivery</b><small>Freshness at your door</small></p></div>
-  <div><span>🌿</span><p><b>Farm fresh</b><small>Carefully selected produce</small></p></div>
-  <div><span>💚</span><p><b>Healthy choices</b><small>Goodness in every bite</small></p></div>
-  <div><span>💳</span><p><b>Easy payment</b><small>Simple and secure ordering</small></p></div>
-</section>
-<section class="section">
-  <div class="section-heading">
-    <div>
-      <span class="eyebrow">WHAT'S IN SEASON</span>
-      <h2>Fresh picks for you</h2>
-    </div>
-    <a class="text-link" href="products.html">View all products →</a>
-  </div>
-  <div class="product-grid">
-    <article class="product-card">
-      <div class="product-photo photo-tomato"></div>
-      <div class="product-info">
-        <span class="tag">VEGETABLE</span>
-        <h3>Fresh Tomatoes</h3>
-        <div class="price">₹40 <small>/ 500g</small></div>
-        <button class="add-btn" data-product="Fresh Tomatoes">Add to cart +</button>
-      </div>
-    </article>
-<article class="product-card">
-  <div class="product-photo photo-orange"></div>
-  <div class="product-info">
-    <span class="tag">FRUIT</span>
-    <h3>Juicy Oranges</h3>
-    <div class="price">₹60 <small>/ 1kg</small></div>
-    <button class="add-btn" data-product="Juicy Oranges">Add to cart +</button>
-  </div>
-</article>
-</div></section>
-<section class="promo">
-  <div><span class="eyebrow light">A LITTLE SOMETHING FOR YOU</span>
-    <h2>Fresh deals, happier meals.</h2>
-    <p>Explore this week's special offers on your everyday favourites.</p>
-    <a class="btn btn-light" href="offers.html">Explore offers →</a></div>
-    <div class="promo-art">🥑🍋🥕</div>
-  </section>
-<section class="newsletter"><span class="eyebrow">STAY IN THE LOOP</span><h2>Fresh news, straight to you.</h2><p>Get seasonal updates and special offers from Fresh & Veg.</p><form id="newsletter-form"><input type="email" placeholder="Enter your email address" required><button class="btn btn-primary">Subscribe</button></form><small id="newsletter-message"></small></section>
-</main><footer class="footer"><a class="brand" href="index.html">🥬 fresh<span>&</span>veg</a><p>Fresh choices. Healthy living.</p><div><a href="about.html">About</a><a href="products.html">Products</a><a href="contact.html">Contact</a></div><small>© 2026 Fresh & Veg. Made with care.</small></footer>
-<script src="script.js"></script>
+
+
+    <!-- ================= HERO SECTION ================= -->
+
+    <section class="hero">
+
+        <div class="container">
+
+            <div class="hero-content">
+
+                <p>🌱 WELCOME TO FRESH & VEG</p>
+
+                <h1>
+                    Fresh Fruits & Vegetables
+                    <span>Delivered To Your Doorstep</span>
+                </h1>
+
+                <p>
+                    Enjoy farm-fresh fruits and vegetables at the best prices.
+                    Healthy food, fresh quality and convenient home delivery.
+                </p>
+
+                <a href="products.html" class="btn btn-primary">
+                    Shop Now →
+                </a>
+
+                <a href="about.html" class="btn btn-secondary">
+                    Learn More
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= BENEFITS SECTION ================= -->
+
+    <section class="section">
+
+        <div class="container">
+
+            <div class="benefits-grid">
+
+                <div class="benefit-card">
+
+                    <div class="icon">🥬</div>
+
+                    <h3>100% Fresh</h3>
+
+                    <p>Fresh and quality products for your family.</p>
+
+                </div>
+
+
+                <div class="benefit-card">
+
+                    <div class="icon">🚚</div>
+
+                    <h3>Fast Delivery</h3>
+
+                    <p>Convenient delivery directly to your doorstep.</p>
+
+                </div>
+
+
+                <div class="benefit-card">
+
+                    <div class="icon">💰</div>
+
+                    <h3>Best Prices</h3>
+
+                    <p>Get fresh products at affordable prices.</p>
+
+                </div>
+
+
+                <div class="benefit-card">
+
+                    <div class="icon">🛡️</div>
+
+                    <h3>Quality Promise</h3>
+
+                    <p>We care about freshness, hygiene and quality.</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CATEGORIES SECTION ================= -->
+
+    <section class="section">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <h2>Shop By Categories</h2>
+
+                <p>Explore our fresh and healthy product categories.</p>
+
+            </div>
+
+
+            <div class="category-grid">
+
+
+                <a href="fruits.html" class="category-card">
+
+                    <img src="https://images.unsplash.com/photo-1610832958506-aa56368176cf?w=400"
+                        alt="Fresh Fruits">
+
+                    <h3>Fresh Fruits</h3>
+
+                </a>
+
+
+                <a href="vegetables.html" class="category-card">
+
+                    <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?w=400"
+                        alt="Fresh Vegetables">
+
+                    <h3>Fresh Vegetables</h3>
+
+                </a>
+
+
+                <a href="salad.html" class="category-card">
+
+                    <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=400"
+                        alt="Fresh Salad">
+
+                    <h3>Fresh Salad</h3>
+
+                </a>
+
+
+                <a href="juice.html" class="category-card">
+
+                    <img src="https://images.unsplash.com/photo-1600271886742-f049cd451bba?w=400"
+                        alt="Fresh Juice">
+
+                    <h3>Fresh Juice</h3>
+
+                </a>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FEATURED PRODUCTS ================= -->
+
+    <section class="section">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <h2>Our Popular Products</h2>
+
+                <p>Choose your favourite fresh products.</p>
+
+            </div>
+
+
+            <div class="product-grid">
+
+
+                <!-- PRODUCT 1 -->
+
+                <div class="product-card">
+
+                    <div class="product-image">
+
+                        <img src="https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6?w=400"
+                            alt="Fresh Apple">
+
+                    </div>
+
+                    <div class="product-info">
+
+                        <h3>Fresh Apple</h3>
+
+                        <p>Fresh Red Apple</p>
+
+                        <div class="product-price">
+                            ₹120 / kg
+                        </div>
+
+                        <button onclick="addToCart('Fresh Apple',120,'1 kg')">
+                            Add to Cart
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PRODUCT 2 -->
+
+                <div class="product-card">
+
+                    <div class="product-image">
+
+                        <img src="https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?w=400"
+                            alt="Fresh Banana">
+
+                    </div>
+
+                    <div class="product-info">
+
+                        <h3>Fresh Banana</h3>
+
+                        <p>Sweet Yellow Banana</p>
+
+                        <div class="product-price">
+                            ₹50 / dozen
+                        </div>
+
+                        <button onclick="addToCart('Fresh Banana',50,'1 dozen')">
+                            Add to Cart
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PRODUCT 3 -->
+
+                <div class="product-card">
+
+                    <div class="product-image">
+
+                        <img src="https://images.unsplash.com/photo-1546094096-0df4bcaaa337?w=400"
+                            alt="Fresh Tomato">
+
+                    </div>
+
+                    <div class="product-info">
+
+                        <h3>Fresh Tomato</h3>
+
+                        <p>Farm Fresh Tomato</p>
+
+                        <div class="product-price">
+                            ₹30 / kg
+                        </div>
+
+                        <button onclick="addToCart('Fresh Tomato',30,'1 kg')">
+                            Add to Cart
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PRODUCT 4 -->
+
+                <div class="product-card">
+
+                    <div class="product-image">
+
+                        <img src="https://images.unsplash.com/photo-1518977676601-b53f82aba655?w=400"
+                            alt="Fresh Potato">
+
+                    </div>
+
+                    <div class="product-info">
+
+                        <h3>Fresh Potato</h3>
+
+                        <p>Quality Farm Potato</p>
+
+                        <div class="product-price">
+                            ₹25 / kg
+                        </div>
+
+                        <button onclick="addToCart('Fresh Potato',25,'1 kg')">
+                            Add to Cart
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+            <div style="text-align:center; margin-top:35px;">
+
+                <a href="products.html" class="btn btn-primary">
+                    View All Products →
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= SPECIAL OFFER ================= -->
+
+    <section class="section">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <h2>Special Offers 🔥</h2>
+
+                <p>Save more on your favourite fresh products.</p>
+
+            </div>
+
+
+            <div class="product-grid">
+
+
+                <div class="product-card">
+
+                    <span class="product-badge">20% OFF</span>
+
+                    <div class="product-image">
+
+                        <img src="https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6?w=400"
+                            alt="Apple Offer">
+
+                    </div>
+
+                    <div class="product-info">
+
+                        <h3>Fresh Apple</h3>
+
+                        <div class="product-price">
+                            ₹96 <del>₹120</del>
+                        </div>
+
+                        <button onclick="addToCart('Fresh Apple',96,'1 kg')">
+                            Add to Cart
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="product-card">
+
+                    <span class="product-badge">15% OFF</span>
+
+                    <div class="product-image">
+
+                        <img src="https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?w=400"
+                            alt="Banana Offer">
+
+                    </div>
+
+                    <div class="product-info">
+
+                        <h3>Fresh Banana</h3>
+
+                        <div class="product-price">
+                            ₹42 <del>₹50</del>
+                        </div>
+
+                        <button onclick="addToCart('Fresh Banana',42,'1 dozen')">
+                            Add to Cart
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+            <div style="text-align:center; margin-top:35px;">
+
+                <a href="offers.html" class="btn btn-secondary">
+                    Explore All Offers →
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= ABOUT SECTION ================= -->
+
+    <section class="section">
+
+        <div class="container about-content">
+
+            <div>
+
+                <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?w=700"
+                    alt="Fresh Fruits and Vegetables">
+
+            </div>
+
+
+            <div>
+
+                <h2>Why Choose Fresh & Veg?</h2>
+
+                <p>
+                    Fresh & Veg is committed to providing fresh fruits,
+                    vegetables and healthy food products to customers.
+                </p>
+
+                <p>
+                    Our goal is to make fresh shopping easy, affordable
+                    and convenient for everyone.
+                </p>
+
+                <p>
+                    Choose Fresh & Veg for quality products and
+                    convenient home delivery.
+                </p>
+
+                <a href="about.html" class="btn btn-primary">
+                    About Us →
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CALL TO ACTION ================= -->
+
+    <section class="section">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <h2>Eat Fresh. Stay Healthy.</h2>
+
+                <p>
+                    Order your favourite fruits and vegetables today.
+                </p>
+
+                <br>
+
+                <a href="products.html" class="btn btn-primary">
+                    Start Shopping →
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="site-footer">
+
+        <div class="container">
+
+            <div class="footer-grid">
+
+
+                <div class="footer-column">
+
+                    <h3 class="logo">
+                        Fresh<span>&</span>Veg.
+                    </h3>
+
+                    <p>
+                        Your trusted destination for fresh fruits,
+                        vegetables, salads and healthy juices.
+                    </p>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h3>Quick Links</h3>
+
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About Us</a>
+                    <a href="products.html">Products</a>
+                    <a href="offers.html">Offers</a>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h3>Categories</h3>
+
+                    <a href="fruits.html">Fruits</a>
+                    <a href="vegetables.html">Vegetables</a>
+                    <a href="salad.html">Salad</a>
+                    <a href="juice.html">Juices</a>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h3>Customer Support</h3>
+
+                    <a href="contact.html">Contact Us</a>
+                    <a href="login.html">Login</a>
+                    <a href="signup.html">Create Account</a>
+                    <a href="cart.html">Shopping Cart</a>
+
+                </div>
+
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                <p>
+                    © 2026 Fresh & Veg. All Rights Reserved.
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script src="script.js"></script>
+
 </body>
+
 </html>

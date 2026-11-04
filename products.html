@@ -1,57 +1,397 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Products | Fresh & Veg</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <header class="site-header">
-            <a class="brand" href="index.html">🥬 fresh<span>&</span>veg</a>
-            <button class="menu-toggle" aria-label="Open menu">☰</button>
-            <nav class="nav">
-                <a href="index.html">Home</a>
-                <a href="about.html">About</a>
-                <a class="active" href="products.html">Products</a>
-                <a href="offers.html">Offers</a>
-                <a href="contact.html">Contact</a>
-            </nav>
-            <a class="cart-link" href="#cart">🛒 <span id="cart-count">0</span></a>
-        </header>
-        <main>
-            <section class="page-hero compact">
-                <span class="eyebrow">THE FRESH MARKET</span>
-                <h1>Our <em>products</em></h1>
-                <p>Everyday fruits and vegetables for a fresher kitchen.</p>
-            </section>
-            <section class="section">
-                <div class="filter-row">
-                    <h2>Shop favourites</h2>
-                    <div>
-                        <button class="filter active" data-filter="all">All</button>
-                        <button class="filter" data-filter="fruit">Fruits</button>
-                        <button class="filter" data-filter="vegetable">Vegetables</button>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>All Products | Fresh & Veg</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="products.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+    <div class="container header-container">
+
+        <a href="index.html" class="logo">
+            fresh<span>&</span>veg
+        </a>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+            ☰
+        </button>
+
+        <nav class="main-nav" id="mainNav">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="products.html" class="active">Products</a>
+            <a href="offers.html">Offers</a>
+            <a href="contact.html">Contact</a>
+            <a href="cart.html" class="cart-link">
+                Cart 🛒 <span id="cartCount">0</span>
+            </a>
+        </nav>
+
+    </div>
+</header>
+
+<!-- SHOPPING CATEGORY NAVIGATION -->
+<div class="category-nav">
+    <div class="container category-nav-inner">
+        <a href="products.html" class="active">All Products</a>
+        <a href="fruits.html">🍎 Fruits</a>
+        <a href="vegetables.html">🥦 Vegetables</a>
+        <a href="salad.html">🥗 Salad</a>
+        <a href="juice.html">🧃 Juice</a>
+        <a href="offers.html">🔥 Offers</a>
+    </div>
+</div>
+
+<!-- HERO SECTION -->
+<section class="products-hero">
+    <div class="container">
+        <div class="products-hero-content">
+            <span class="hero-label">FRESHNESS AT YOUR DOORSTEP</span>
+
+            <h1>All Your Daily Needs,<br>
+                <span>Fresh & Healthy</span>
+            </h1>
+
+            <p>
+                Explore our collection of fresh fruits, vegetables,
+                healthy salads and refreshing juices.
+            </p>
+
+            <a href="#allProducts" class="shop-btn">Shop Now →</a>
+        </div>
+    </div>
+</section>
+
+<!-- BENEFITS -->
+<section class="product-benefits">
+    <div class="container benefits-grid">
+
+        <div class="benefit-item">
+            <span>🌱</span>
+            <div>
+                <h4>100% Fresh</h4>
+                <p>Fresh quality products</p>
+            </div>
+        </div>
+
+        <div class="benefit-item">
+            <span>🚚</span>
+            <div>
+                <h4>Fast Delivery</h4>
+                <p>Quick doorstep delivery</p>
+            </div>
+        </div>
+
+        <div class="benefit-item">
+            <span>💰</span>
+            <div>
+                <h4>Best Prices</h4>
+                <p>Affordable daily prices</p>
+            </div>
+        </div>
+
+        <div class="benefit-item">
+            <span>🥬</span>
+            <div>
+                <h4>Healthy Choice</h4>
+                <p>Good food, good health</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- ALL PRODUCTS -->
+<section class="all-products-section" id="allProducts">
+
+    <div class="container">
+
+        <div class="section-heading">
+            <span>OUR COLLECTION</span>
+            <h2>Explore All Products</h2>
+            <p>Choose your favourite fresh products.</p>
+        </div>
+
+        <!-- SEARCH -->
+        <div class="product-toolbar">
+
+            <div class="product-search">
+                <input
+                    type="search"
+                    id="productSearch"
+                    placeholder="Search fruits, vegetables, juice..."
+                    oninput="searchProducts()"
+                >
+                <button type="button" onclick="searchProducts()">🔍</button>
+            </div>
+
+            <select id="sortProducts" onchange="sortProducts()">
+                <option value="default">Sort By: Default</option>
+                <option value="low">Price: Low to High</option>
+                <option value="high">Price: High to Low</option>
+                <option value="name">Name: A to Z</option>
+            </select>
+
+        </div>
+
+        <!-- FILTER BUTTONS -->
+        <div class="product-filters">
+            <button class="filter-btn active" onclick="filterProducts('all', this)">All</button>
+            <button class="filter-btn" onclick="filterProducts('fruit', this)">🍎 Fruits</button>
+            <button class="filter-btn" onclick="filterProducts('vegetable', this)">🥦 Vegetables</button>
+            <button class="filter-btn" onclick="filterProducts('salad', this)">🥗 Salad</button>
+            <button class="filter-btn" onclick="filterProducts('juice', this)">🧃 Juice</button>
+        </div>
+
+        <!-- PRODUCT GRID -->
+        <div class="products-grid" id="productsGrid">
+
+            <!-- FRUITS -->
+
+            <div class="product-card" data-category="fruit" data-name="Apple" data-price="120">
+                <div class="product-image">
+                    <span class="product-badge">Fresh</span>
+                    <img src="https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6?w=500" alt="Apple">
+                </div>
+                <div class="product-info">
+                    <span class="product-category">Fruits</span>
+                    <h3>Fresh Apple</h3>
+                    <p class="product-price">₹120 <small>/ 1 kg</small></p>
+                    <div class="product-actions">
+                        <select class="weight-select">
+                            <option value="1 kg" data-price="120">1 kg - ₹120</option>
+                            <option value="500 g" data-price="60">500 g - ₹60</option>
+                        </select>
+                        <button onclick="addProduct(this)">Add +</button>
                     </div>
                 </div>
-                <div class="product-grid" id="all-products">
-                    <article class="product-card" data-category="vegetable">
-                        <div class="product-photo photo-tomato"></div>
-                        <div class="product-info">
-                            <span class="tag">VEGETABLE</span>
-                            <h3>Fresh Tomatoes</h3>
-                            <div class="price">₹40 <small>/ 500g</small></div>
-                            <button class="add-btn" data-product="Fresh Tomatoes">Add to cart +</button>
-                        </div>
-                    </article>
-<article class="product-card" data-category="fruit">
-    <div class="product-photo photo-orange">      
+            </div>
+
+            <div class="product-card" data-category="fruit" data-name="Banana" data-price="50">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?w=500" alt="Banana">
+                </div>
+                <div class="product-info">
+                    <span class="product-category">Fruits</span>
+                    <h3>Fresh Banana</h3>
+                    <p class="product-price">₹50 <small>/ 1 dozen</small></p>
+                    <div class="product-actions">
+                        <select class="weight-select">
+                            <option value="1 dozen" data-price="50">1 dozen - ₹50</option>
+                            <option value="6 pieces" data-price="25">6 pieces - ₹25</option>
+                        </select>
+                        <button onclick="addProduct(this)">Add +</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="fruit" data-name="Orange" data-price="80">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1547514701-42782101795e?w=500" alt="Orange">
+                </div>
+                <div class="product-info">
+                    <span class="product-category">Fruits</span>
+                    <h3>Fresh Orange</h3>
+                    <p class="product-price">₹80 <small>/ 1 kg</small></p>
+                    <div class="product-actions">
+                        <select class="weight-select">
+                            <option value="1 kg" data-price="80">1 kg - ₹80</option>
+                            <option value="500 g" data-price="40">500 g - ₹40</option>
+                        </select>
+                        <button onclick="addProduct(this)">Add +</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- VEGETABLES -->
+
+            <div class="product-card" data-category="vegetable" data-name="Tomato" data-price="30">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1546094096-0df4bcaaa337?w=500" alt="Tomato">
+                </div>
+                <div class="product-info">
+                    <span class="product-category">Vegetables</span>
+                    <h3>Fresh Tomato</h3>
+                    <p class="product-price">₹30 <small>/ 1 kg</small></p>
+                    <div class="product-actions">
+                        <select class="weight-select">
+                            <option value="1 kg" data-price="30">1 kg - ₹30</option>
+                            <option value="500 g" data-price="15">500 g - ₹15</option>
+                        </select>
+                        <button onclick="addProduct(this)">Add +</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="vegetable" data-name="Potato" data-price="25">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1518977676601-b53f82aba655?w=500" alt="Potato">
+                </div>
+                <div class="product-info">
+                    <span class="product-category">Vegetables</span>
+                    <h3>Fresh Potato</h3>
+                    <p class="product-price">₹25 <small>/ 1 kg</small></p>
+                    <div class="product-actions">
+                        <select class="weight-select">
+                            <option value="1 kg" data-price="25">1 kg - ₹25</option>
+                            <option value="500 g" data-price="13">500 g - ₹13</option>
+                        </select>
+                        <button onclick="addProduct(this)">Add +</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="vegetable" data-name="Carrot" data-price="40">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1445282768818-728615cc910a?w=500" alt="Carrot">
+                </div>
+                <div class="product-info">
+                    <span class="product-category">Vegetables</span>
+                    <h3>Fresh Carrot</h3>
+                    <p class="product-price">₹40 <small>/ 1 kg</small></p>
+                    <div class="product-actions">
+                        <select class="weight-select">
+                            <option value="1 kg" data-price="40">1 kg - ₹40</option>
+                            <option value="500 g" data-price="20">500 g - ₹20</option>
+                        </select>
+                        <button onclick="addProduct(this)">Add +</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SALAD -->
+
+            <div class="product-card" data-category="salad" data-name="Green Salad" data-price="60">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=500" alt="Green Salad">
+                </div>
+                <div class="product-info">
+                    <span class="product-category">Salad</span>
+                    <h3>Green Salad</h3>
+                    <p class="product-price">₹60 <small>/ 250 g</small></p>
+                    <div class="product-actions">
+                        <select class="weight-select">
+                            <option value="250 g" data-price="60">250 g - ₹60</option>
+                            <option value="500 g" data-price="120">500 g - ₹120</option>
+                        </select>
+                        <button onclick="addProduct(this)">Add +</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="salad" data-name="Fruit Salad" data-price="80">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1490474418585-ba9bad8fd0ea?w=500" alt="Fruit Salad">
+                </div>
+                <div class="product-info">
+                    <span class="product-category">Salad</span>
+                    <h3>Fresh Fruit Salad</h3>
+                    <p class="product-price">₹80 <small>/ 250 g</small></p>
+                    <div class="product-actions">
+                        <select class="weight-select">
+                            <option value="250 g" data-price="80">250 g - ₹80</option>
+                            <option value="500 g" data-price="160">500 g - ₹160</option>
+                        </select>
+                        <button onclick="addProduct(this)">Add +</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- JUICE -->
+
+            <div class="product-card" data-category="juice" data-name="Orange Juice" data-price="50">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1600271886742-f049cd451bba?w=500" alt="Orange Juice">
+                </div>
+                <div class="product-info">
+                    <span class="product-category">Juice</span>
+                    <h3>Orange Juice</h3>
+                    <p class="product-price">₹50 <small>/ 250 ml</small></p>
+                    <div class="product-actions">
+                        <select class="weight-select">
+                            <option value="250 ml" data-price="50">250 ml - ₹50</option>
+                            <option value="500 ml" data-price="100">500 ml - ₹100</option>
+                        </select>
+                        <button onclick="addProduct(this)">Add +</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="juice" data-name="Watermelon Juice" data-price="40">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1525385133512-2f3bdd039054?w=500" alt="Watermelon Juice">
+                </div>
+                <div class="product-info">
+                    <span class="product-category">Juice</span>
+                    <h3>Watermelon Juice</h3>
+                    <p class="product-price">₹40 <small>/ 250 ml</small></p>
+                    <div class="product-actions">
+                        <select class="weight-select">
+                            <option value="250 ml" data-price="40">250 ml - ₹40</option>
+                            <option value="500 ml" data-price="80">500 ml - ₹80</option>
+                        </select>
+                        <button onclick="addProduct(this)">Add +</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <p class="no-products" id="noProducts" hidden>
+            No products found. Try another search.
+        </p>
+
     </div>
-    <div class="product-info"><span class="tag">FRUIT</span><h3>Juicy Oranges</h3><div class="price">₹60 <small>/ 1kg</small></div><button class="add-btn" data-product="Juicy Oranges">Add to cart +
-        
-    </button>
-</div>
-</article>
-<article class="product-card" data-category="vegetable"><div class="product-photo photo-carrot"></div><div class="product-info"><span class="tag">VEGETABLE</span><h3>Crunchy Carrots</h3><div class="price">₹35 <small>/ 500g</small></div><button class="add-btn" data-product="Crunchy Carrots">Add to cart +</button></div></article>
-<article class="product-card" data-category="fruit"><div class="product-photo photo-apple"></div><div class="product-info"><span class="tag">FRUIT</span><h3>Red Apples</h3><div class="price">₹120 <small>/ 1kg</small></div><button class="add-btn" data-product="Red Apples">Add to cart +</button></div></article>
-</div><div class="cart-panel" id="cart"><h2>Your basket</h2><p id="cart-items">Your basket is empty. Add some fresh picks!</p><a class="btn btn-primary" id="order-whatsapp" href="#">Order on WhatsApp</a><small class="hint">Demo prices: update them to match your shop. WhatsApp ordering needs your number in script.js.</small></div></section></main><footer class="footer"><a class="brand" href="index.html">🥬 fresh<span>&</span>veg</a><small>© 2026 Fresh & Veg.</small></footer><script src="script.js"></script></body></html>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+    <div class="container footer-content">
+
+        <div>
+            <a href="index.html" class="logo footer-logo">
+                fresh<span>&</span>veg
+            </a>
+            <p>Fresh fruits and vegetables delivered to your doorstep.</p>
+        </div>
+
+        <div class="footer-links">
+            <h3>Quick Links</h3>
+            <a href="about.html">About Us</a>
+            <a href="products.html">All Products</a>
+            <a href="cart.html">Shopping Cart</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+
+        <div class="footer-links">
+            <h3>Categories</h3>
+            <a href="fruits.html">Fruits</a>
+            <a href="vegetables.html">Vegetables</a>
+            <a href="salad.html">Salad</a>
+            <a href="juice.html">Juice</a>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2026 Fresh & Veg. All Rights Reserved.</p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+<script src="products.js"></script>
+
+</body>
+</html>

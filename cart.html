@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Cart | Fresh & Veg</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="products.css">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container header-container">
+        <a href="index.html" class="logo">fresh<span>&</span>veg</a>
+        <nav class="main-nav">
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="cart.html" class="active">Cart 🛒</a>
+            <a href="login.html">Login</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </div>
+</header>
+
+<section class="all-products-section">
+    <div class="container">
+
+        <div class="section-heading">
+            <h2>My Shopping Cart 🛒</h2>
+            <p>Review your selected products.</p>
+        </div>
+
+        <div id="cartItems">
+            <!-- Cart products will appear here using JavaScript -->
+        </div>
+
+        <div class="cart-summary">
+            <h3>Order Summary</h3>
+            <p>Subtotal: ₹<span id="cartSubtotal">0</span></p>
+            <p>Delivery Charge: ₹<span id="deliveryCharge">0</span></p>
+            <h3>Total: ₹<span id="cartTotal">0</span></h3>
+
+            <a href="products.html">Continue Shopping</a>
+            <a href="checkout.html">Proceed to Checkout</a>
+        </div>
+
+    </div>
+</section>
+
+<footer class="site-footer">
+    <div class="container">
+        <p>© 2026 Fresh & Veg. All Rights Reserved.</p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

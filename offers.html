@@ -3,56 +3,142 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Offers | Fresh & Veg</title>
+    <title>Special Offers | Fresh & Veg</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="products.css">
 </head>
 <body>
-    <header class="site-header">
-        <a class="brand" href="index.html">🥬 fresh<span>&</span>veg</a>
-        <button class="menu-toggle" aria-label="Open menu">☰</button>
-        <nav class="nav">
+
+<header class="site-header">
+    <div class="container header-container">
+        <a href="index.html" class="logo">fresh<span>&</span>veg</a>
+        <nav class="main-nav">
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
             <a href="products.html">Products</a>
-            <a class="active" href="offers.html">Offers</a>
+            <a href="offers.html" class="active">Offers</a>
+            <a href="cart.html">Cart 🛒</a>
             <a href="contact.html">Contact</a>
         </nav>
-        <a class="cart-link" href="products.html">🛒 <span id="cart-count">0</span></a>
-    </header>
-    <main>
-        <section class="page-hero">
-            <span class="eyebrow">GOOD DEALS, GREAT FOOD</span>
-            <h1>Fresh offers<br><em>for every basket.</em></h1>
-            <p>Make your everyday shopping a little more rewarding.</p>
-        </section>
-        <section class="offer-grid section">
-            <article class="offer-card offer-green">
-                <span>WEEKLY SPECIAL</span>
-                <h2>10% OFF</h2>
-                <p>On your first order of fresh fruits and vegetables.</p>
-                <a href="products.html">Shop now →</a>
-                <small>Use code: FRESH10</small>
-            </article>
-            <article class="offer-card offer-yellow">
-                <span>FAMILY BASKET</span>
-                <h2>Combo deals</h2>
-                <p>Build a family basket with your daily kitchen essentials.</p>
-                <a href="contact.html">Ask about combos →</a>
-                <small>Availability may vary.</small>
-            </article>
-            <article class="offer-card offer-pink">
-                <span>SEASONAL PICKS</span>
-                <h2>Seasonal savings</h2>
-                <p>Look out for special prices on seasonal produce.</p>
-                <a href="products.html">Explore products →</a>
-                <small>Check current prices before ordering.</small>
-            </article>
-        </section>
-    </main>
-    <footer class="footer">
-        <a class="brand" href="index.html">🥬 fresh<span>&</span>veg</a>
-        <small>© 2026 Fresh & Veg.</small>
-    </footer>
-    <script src="script.js"></script>
+    </div>
+</header>
+
+<div class="category-nav">
+    <div class="container category-nav-inner">
+        <a href="products.html">All Products</a>
+        <a href="fruits.html">🍎 Fruits</a>
+        <a href="vegetables.html">🥦 Vegetables</a>
+        <a href="salad.html">🥗 Salad</a>
+        <a href="juice.html">🧃 Juice</a>
+        <a href="offers.html" class="active">🔥 Offers</a>
+    </div>
+</div>
+
+<section class="products-hero">
+    <div class="container">
+        <h1>Special Offers & Deals 🔥</h1>
+        <p>Save more on your favourite fresh products.</p>
+    </div>
+</section>
+
+<section class="all-products-section">
+    <div class="container">
+
+        <div class="section-heading">
+            <h2>Today's Special Deals</h2>
+            <p>Enjoy great prices on selected products.</p>
+        </div>
+
+        <div class="products-grid">
+
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="product-badge">20% OFF</span>
+                    <img src="https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6?w=500" alt="Apple">
+                </div>
+                <div class="product-info">
+                    <span class="product-category">Fruits</span>
+                    <h3>Fresh Apple</h3>
+                    <p class="product-price">₹96 <del>₹120</del> <small>/ 1 kg</small></p>
+                    <button onclick="addToCart('Fresh Apple',96,'1 kg')">Add to Cart +</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="product-badge">15% OFF</span>
+                    <img src="https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?w=500" alt="Banana">
+                </div>
+                <div class="product-info">
+                    <span class="product-category">Fruits</span>
+                    <h3>Fresh Banana</h3>
+                    <p class="product-price">₹42 <del>₹50</del> <small>/ dozen</small></p>
+                    <button onclick="addToCart('Fresh Banana',42,'1 dozen')">Add to Cart +</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="product-badge">20% OFF</span>
+                    <img src="https://images.unsplash.com/photo-1546094096-0df4bcaaa337?w=500" alt="Tomato">
+                </div>
+                <div class="product-info">
+                    <span class="product-category">Vegetables</span>
+                    <h3>Fresh Tomato</h3>
+                    <p class="product-price">₹24 <del>₹30</del> <small>/ 1 kg</small></p>
+                    <button onclick="addToCart('Fresh Tomato',24,'1 kg')">Add to Cart +</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="product-badge">10% OFF</span>
+                    <img src="https://images.unsplash.com/photo-1518977676601-b53f82aba655?w=500" alt="Potato">
+                </div>
+                <div class="product-info">
+                    <span class="product-category">Vegetables</span>
+                    <h3>Fresh Potato</h3>
+                    <p class="product-price">₹23 <del>₹25</del> <small>/ 1 kg</small></p>
+                    <button onclick="addToCart('Fresh Potato',23,'1 kg')">Add to Cart +</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="product-badge">15% OFF</span>
+                    <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=500" alt="Green Salad">
+                </div>
+                <div class="product-info">
+                    <span class="product-category">Salad</span>
+                    <h3>Green Salad</h3>
+                    <p class="product-price">₹51 <del>₹60</del> <small>/ 250 g</small></p>
+                    <button onclick="addToCart('Green Salad',51,'250 g')">Add to Cart +</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="product-badge">20% OFF</span>
+                    <img src="https://images.unsplash.com/photo-1600271886742-f049cd451bba?w=500" alt="Orange Juice">
+                </div>
+                <div class="product-info">
+                    <span class="product-category">Juice</span>
+                    <h3>Orange Juice</h3>
+                    <p class="product-price">₹40 <del>₹50</del> <small>/ 250 ml</small></p>
+                    <button onclick="addToCart('Orange Juice',40,'250 ml')">Add to Cart +</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<footer class="site-footer">
+    <div class="container">
+        <p>© 2026 Fresh & Veg. All Rights Reserved.</p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>

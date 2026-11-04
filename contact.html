@@ -3,62 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact | Fresh & Veg</title>
+    <title>Contact Us | Fresh & Veg</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="products.css">
 </head>
 <body>
-    <header class="site-header">
-        <a class="brand" href="index.html">🥬 fresh<span>&</span>veg</a>
-        <button class="menu-toggle" aria-label="Open menu">☰</button>
-        <nav class="nav">
+
+<header class="site-header">
+    <div class="container header-container">
+        <a href="index.html" class="logo">fresh<span>&</span>veg</a>
+        <nav class="main-nav">
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
             <a href="products.html">Products</a>
             <a href="offers.html">Offers</a>
-            <a class="active" href="contact.html">Contact</a>
+            <a href="contact.html" class="active">Contact</a>
         </nav>
-        <a class="cart-link" href="products.html">🛒 <span id="cart-count">0</span></a>
-    </header>
-    <main>
-        <section class="page-hero compact">
-            <span class="eyebrow">WE'RE HERE TO HELP</span>
-            <h1>Let's talk <em>fresh.</em></h1>
-            <p>Questions, bulk orders or delivery enquiries? Send us a message.</p>
-        </section>
-        <section class="contact-layout section">
-            <div class="contact-info">
-                <h2>Get in touch</h2>
-                <p>We'd love to hear from you. Replace the sample details below with your shop's real contact information.</p>
-                <p>📍 <b>Location</b><br>Chaibasa, Jharkhand, India</p>
-                <p>📞 <b>Phone / WhatsApp</b><br>+91 7979068661</p>
-                <p>✉️ <b>Email</b><br>hello@freshandveg.example</p>
-            </div>
-            <form class="contact-form" id="contact-form">
-                <label>Your name
-                    <input required name="name" placeholder="Enter your name">
-                </label>
-                <label>Phone number
-                    <input required name="phone" placeholder="Enter your phone number">
-                </label>
-                <label>What do you need?
-                    <select name="subject">
-                        <option>Product enquiry</option>
-                        <option>Place an order</option>
-                        <option>Delivery question</option>
-                        <option>Other</option>
-                    </select>
-                </label>
-                <label>Message
-                    <textarea required name="message" rows="4" placeholder="Write your message..."></textarea>
-                </label>
-                <button class="btn btn-primary">Send on WhatsApp →</button>
-            </form>
-        </section>
-    </main>
-    <footer class="footer">
-        <a class="brand" href="index.html">🥬 fresh<span>&</span>veg</a>
-        <small>© 2026 Fresh & Veg.</small>
-    </footer>
-    <script src="script.js"></script>
+    </div>
+</header>
+
+<section class="products-hero">
+    <div class="container">
+        <h1>Contact Fresh & Veg</h1>
+        <p>We are here to help you. Contact us for any questions or support.</p>
+    </div>
+</section>
+
+<section class="all-products-section">
+    <div class="container">
+
+        <div class="section-heading">
+            <h2>Get In Touch</h2>
+            <p>We would love to hear from you.</p>
+        </div>
+
+        <div class="contact-details">
+            <h3>Our Contact Information</h3>
+            <p>📍 Location: Chaibasa, Jharkhand, India</p>
+            <p>📧 Email: paramjeetmahato@gmail.com</p>
+            <p>📞 Phone: +91 7979068661</p>
+            <p>🕒 Working Hours: 8:00 AM – 9:00 PM</p>
+        </div>
+
+        <form id="contactForm">
+
+            <label>Your Name</label>
+            <input type="text" name="name" placeholder="Enter your name" required>
+
+            <label>Email Address</label>
+            <input type="email" name="email" placeholder="Enter your email" required>
+
+            <label>Mobile Number</label>
+            <input type="tel" name="phone" placeholder="Enter your mobile number">
+
+            <label>Subject</label>
+            <input type="text" name="subject" placeholder="Enter subject">
+
+            <label>Your Message</label>
+            <textarea name="message" rows="5"
+                      placeholder="Write your message here..." required></textarea>
+
+            <button type="submit">Send Message</button>
+
+        </form>
+
+    </div>
+</section>
+
+<footer class="site-footer">
+    <div class="container">
+        <p>© 2026 Fresh & Veg. All Rights Reserved.</p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>

@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+```
+<meta name="description" content="Buy fresh potatoes, tomatoes, onions, carrots and green vegetables online at Fresh & Veg.">
+
+<title>Fresh Vegetables | Fresh & Veg</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="vegetables.css">
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+```
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header class="site-header">
+
+```
+<a class="brand" href="index.html">
+    <span class="brand-icon">🥬</span>
+    fresh<span>&</span>veg
+</a>
+
+<div class="header-search">
+    <input type="search" id="vegetableSearch"
+        placeholder="Search vegetables...">
+
+    <button type="button" onclick="searchVegetables()">
+        Search
+    </button>
+</div>
+
+<button class="menu-toggle" aria-label="Open menu"
+    aria-expanded="false">☰</button>
+
+<a class="cart-link" href="cart.html">
+    🛒 Cart <span id="cart-count">0</span>
+</a>
+```
+
+</header>
+
+<!-- SHOPPING NAVIGATION -->
+
+<nav class="category-navbar">
+
+```
+<div class="category-links">
+
+    <a href="products.html">All Products</a>
+    <a href="fruits.html">🍎 Fruits</a>
+    <a class="active" href="vegetables.html">🥦 Vegetables</a>
+    <a href="salad.html">🥗 Salad</a>
+    <a href="juice.html">🧃 Juice</a>
+    <a href="offers.html">🔥 Special Offers</a>
+
+</div>
+```
+
+</nav>
+
+<!-- INFORMATION NAVIGATION -->
+
+<nav class="info-navbar">
+
+```
+<div class="nav">
+
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="product.html">Product Details</a>
+    <a href="cart.html">Shopping Cart</a>
+    <a href="checkout.html">Checkout</a>
+    <a href="login.html">Login</a>
+    <a href="signup.html">Signup</a>
+    <a href="orders.html">My Orders</a>
+    <a href="contact.html">Contact Us</a>
+
+</div>
+```
+
+</nav>
+
+<main>
+
+<!-- VEGETABLE HERO -->
+
+<section class="vegetable-hero">
+
+```
+<div class="vegetable-hero-content">
+
+    <span class="eyebrow">FRESH FROM FARM TO YOUR KITCHEN</span>
+
+    <h1>
+        Fresh Vegetables,
+        <em>Healthy Living.</em>
+    </h1>
+
+    <p>
+        Bring home fresh and carefully selected vegetables.
+        Explore everyday essentials and seasonal favourites
+        at Fresh & Veg.
+    </p>
+
+    <a href="#vegetable-products" class="btn btn-primary">
+        Shop Vegetables →
+    </a>
+
+</div>
+
+<div class="vegetable-hero-image">
+
+    <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?w=900"
+        alt="Fresh green vegetables">
+
+</div>
+```
+
+</section>
+
+<!-- BENEFITS -->
+
+<section class="vegetable-benefits">
+
+```
+<div>
+    <span>🥬</span>
+    <p>
+        <b>Fresh Vegetables</b>
+        <small>Daily selection</small>
+    </p>
+</div>
+
+<div>
+    <span>🌱</span>
+    <p>
+        <b>Quality Focus</b>
+        <small>Carefully selected</small>
+    </p>
+</div>
+
+<div>
+    <span>🚚</span>
+    <p>
+        <b>Home Delivery</b>
+        <small>Convenient ordering</small>
+    </p>
+</div>
+
+<div>
+    <span>💚</span>
+    <p>
+        <b>Healthy Choices</b>
+        <small>Fresh everyday food</small>
+    </p>
+</div>
+```
+
+</section>
+
+<!-- VEGETABLE PRODUCTS -->
+
+<section class="section" id="vegetable-products">
+
+```
+<div class="section-heading">
+
+    <div>
+        <span class="eyebrow">FRESH VEGETABLE COLLECTION</span>
+        <h2>Shop Fresh Vegetables</h2>
+        <p>Choose fresh vegetables for your everyday meals.</p>
+    </div>
+
+</div>
+
+
+<!-- FILTER BUTTONS -->
+
+<div class="vegetable-filters">
+
+    <button class="filter-btn active"
+        onclick="filterVegetables('all',this)">
+        All Vegetables
+    </button>
+
+    <button class="filter-btn"
+        onclick="filterVegetables('daily',this)">
+        Daily Essentials
+    </button>
+
+    <button class="filter-btn"
+        onclick="filterVegetables('green',this)">
+        Green Vegetables
+    </button>
+
+    <button class="filter-btn"
+        onclick="filterVegetables('seasonal',this)">
+        Seasonal
+    </button>
+
+</div>
+
+
+<!-- PRODUCT GRID -->
+
+<div class="vegetable-grid" id="vegetableGrid">
+
+
+    <!-- POTATO -->
+
+    <article class="vegetable-card"
+        data-category="daily" data-name="potato">
+
+        <div class="vegetable-photo">
+
+            <img src="https://images.unsplash.com/photo-1518977676601-b53f82aba655?w=500"
+                alt="Fresh Potato">
+
+            <span class="vegetable-badge">Popular</span>
+
+        </div>
+
+        <div class="vegetable-info">
+
+            <span class="tag">DAILY ESSENTIAL</span>
+
+            <h3>Fresh Potato</h3>
+
+            <p>Fresh potatoes for everyday cooking.</p>
+
+            <div class="vegetable-price">
+                ₹30 <small>/ 1kg</small>
+            </div>
+
+            <select class="weight-select">
+                <option value="0">500g - ₹15</option>
+                <option value="1">1kg - ₹30</option>
+                <option value="2">2kg - ₹60</option>
+            </select>
+
+            <div class="vegetable-actions">
+
+                <div class="quantity">
+                    <button onclick="changeVegetableQty(this,-1)">−</button>
+                    <input type="number" value="1" min="1" max="20">
+                    <button onclick="changeVegetableQty(this,1)">+</button>
+                </div>
+
+                <button class="add-btn"
+                    onclick="addVegetable(this,'Fresh Potato',[15,30,60])">
+                    Add +
+                </button>
+
+            </div>
+
+        </div>
+
+    </article>
+
+
+    <!-- TOMATO -->
+
+    <article class="vegetable-card"
+        data-category="daily" data-name="tomato">
+
+        <div class="vegetable-photo">
+
+            <img src="https://images.unsplash.com/photo-1546094096-0df4bcaaa337?w=500"
+                alt="Fresh Tomato">
+
+        </div>
+
+        <div class="vegetable-info">
+
+            <span class="tag">DAILY ESSENTIAL</span>
+
+            <h3>Fresh Tomato</h3>
+
+            <p>Juicy and fresh red tomatoes.</p>
+
+            <div class="vegetable-price">
+                ₹40 <small>/ 1kg</small>
+            </div>
+
+            <select class="weight-select">
+                <option value="0">500g - ₹20</option>
+                <option value="1">1kg - ₹40</option>
+                <option value="2">2kg - ₹80</option>
+            </select>
+
+            <div class="vegetable-actions">
+
+                <div class="quantity">
+                    <button onclick="changeVegetableQty(this,-1)">−</button>
+                    <input type="number" value="1" min="1" max="20">
+                    <button onclick="changeVegetableQty(this,1)">+</button>
+                </div>
+
+                <button class="add-btn"
+                    onclick="addVegetable(this,'Fresh Tomato',[20,40,80])">
+                    Add +
+                </button>
+
+            </div>
+
+        </div>
+
+    </article>
+
+
+    <!-- ONION -->
+
+    <article class="vegetable-card"
+        data-category="daily" data-name="onion">
+
+        <div class="vegetable-photo">
+
+            <img src="https://images.unsplash.com/photo-1508747703725-719777637510?w=500"
+                alt="Fresh Onion">
+
+        </div>
+
+        <div class="vegetable-info">
+
+            <span class="tag">DAILY ESSENTIAL</span>
+
+            <h3>Fresh Onion</h3>
+
+            <p>Fresh onions for everyday cooking.</p>
+
+            <div class="vegetable-price">
+                ₹35 <small>/ 1kg</small>
+            </div>
+
+            <select class="weight-select">
+                <option value="0">500g - ₹17.50</option>
+                <option value="1">1kg - ₹35</option>
+                <option value="2">2kg - ₹70</option>
+            </select>
+
+            <div class="vegetable-actions">
+
+                <div class="quantity">
+                    <button onclick="changeVegetableQty(this,-1)">−</button>
+                    <input type="number" value="1" min="1" max="20">
+                    <button onclick="changeVegetableQty(this,1)">+</button>
+                </div>
+
+                <button class="add-btn"
+                    onclick="addVegetable(this,'Fresh Onion',[17.5,35,70])">
+                    Add +
+                </button>
+
+            </div>
+
+        </div>
+
+    </article>
+
+
+    <!-- CARROT -->
+
+    <article class="vegetable-card"
+        data-category="seasonal" data-name="carrot">
+
+        <div class="vegetable-photo">
+
+            <img src="https://images.unsplash.com/photo-1445282768818-728615cc910a?w=500"
+                alt="Fresh Carrot">
+
+        </div>
+
+        <div class="vegetable-info">
+
+            <span class="tag">SEASONAL</span>
+
+            <h3>Fresh Carrot</h3>
+
+            <p>Crunchy and fresh carrots.</p>
+
+            <div class="vegetable-price">
+                ₹60 <small>/ 1kg</small>
+            </div>
+
+            <select class="weight-select">
+                <option value="0">500g - ₹30</option>
+                <option value="1">1kg - ₹60</option>
+                <option value="2">2kg - ₹120</option>
+            </select>
+
+            <div class="vegetable-actions">
+
+                <div class="quantity">
+                    <button onclick="changeVegetableQty(this,-1)">−</button>
+                    <input type="number" value="1" min="1" max="20">
+                    <button onclick="changeVegetableQty(this,1)">+</button>
+                </div>
+
+                <button class="add-btn"
+                    onclick="addVegetable(this,'Fresh Carrot',[30,60,120])">
+                    Add +
+                </button>
+
+            </div>
+
+        </div>
+
+    </article>
+
+
+    <!-- CABBAGE -->
+
+    <article class="vegetable-card"
+        data-category="daily" data-name="cabbage">
+
+        <div class="vegetable-photo">
+
+            <img src="https://images.unsplash.com/photo-1594282486552-05b4d80fbb9f?w=500"
+                alt="Fresh Cabbage">
+
+        </div>
+
+        <div class="vegetable-info">
+
+            <span class="tag">FRESH VEGETABLE</span>
+
+            <h3>Fresh Cabbage</h3>
+
+            <p>Fresh green cabbage for your meals.</p>
+
+            <div class="vegetable-price">
+                ₹30 <small>/ 1kg</small>
+            </div>
+
+            <select class="weight-select">
+                <option value="0">500g - ₹15</option>
+                <option value="1">1kg - ₹30</option>
+                <option value="2">2kg - ₹60</option>
+            </select>
+
+            <div class="vegetable-actions">
+
+                <div class="quantity">
+                    <button onclick="changeVegetableQty(this,-1)">−</button>
+                    <input type="number" value="1" min="1" max="20">
+                    <button onclick="changeVegetableQty(this,1)">+</button>
+                </div>
+
+                <button class="add-btn"
+                    onclick="addVegetable(this,'Fresh Cabbage',[15,30,60])">
+                    Add +
+                </button>
+
+            </div>
+
+        </div>
+
+    </article>
+
+
+    <!-- CAULIFLOWER -->
+
+    <article class="vegetable-card"
+        data-category="seasonal" data-name="cauliflower">
+
+        <div class="vegetable-photo">
+
+            <img src="https://images.unsplash.com/photo-1568584711271-6c929fb49a60?w=500"
+                alt="Fresh Cauliflower">
+
+        </div>
+
+        <div class="vegetable-info">
+
+            <span class="tag">SEASONAL</span>
+
+            <h3>Fresh Cauliflower</h3>
+
+            <p>Fresh cauliflower for healthy meals.</p>
+
+            <div class="vegetable-price">
+                ₹40 <small>/ 1 piece</small>
+            </div>
+
+            <select class="weight-select">
+                <option value="0">1 Piece - ₹40</option>
+                <option value="1">2 Pieces - ₹80</option>
+            </select>
+
+            <div class="vegetable-actions">
+
+                <div class="quantity">
+                    <button onclick="changeVegetableQty(this,-1)">−</button>
+                    <input type="number" value="1" min="1" max="20">
+                    <button onclick="changeVegetableQty(this,1)">+</button>
+                </div>
+
+                <button class="add-btn"
+                    onclick="addVegetable(this,'Fresh Cauliflower',[40,80])">
+                    Add +
+                </button>
+
+            </div>
+
+        </div>
+
+    </article>
+
+
+    <!-- SPINACH -->
+
+    <article class="vegetable-card"
+        data-category="green" data-name="spinach">
+
+        <div class="vegetable-photo">
+
+            <img src="https://images.unsplash.com/photo-1576045057995-568f588f82fb?w=500"
+                alt="Fresh Spinach">
+
+        </div>
+
+        <div class="vegetable-info">
+
+            <span class="tag">GREEN VEGETABLE</span>
+
+            <h3>Fresh Spinach</h3>
+
+            <p>Fresh green spinach leaves.</p>
+
+            <div class="vegetable-price">
+                ₹30 <small>/ 250g</small>
+            </div>
+
+            <select class="weight-select">
+                <option value="0">250g - ₹30</option>
+                <option value="1">500g - ₹60</option>
+                <option value="2">1kg - ₹120</option>
+            </select>
+
+            <div class="vegetable-actions">
+
+                <div class="quantity">
+                    <button onclick="changeVegetableQty(this,-1)">−</button>
+                    <input type="number" value="1" min="1" max="20">
+                    <button onclick="changeVegetableQty(this,1)">+</button>
+                </div>
+
+                <button class="add-btn"
+                    onclick="addVegetable(this,'Fresh Spinach',[30,60,120])">
+                    Add +
+                </button>
+
+            </div>
+
+        </div>
+
+    </article>
+
+
+    <!-- GREEN PEAS -->
+
+    <article class="vegetable-card"
+        data-category="green" data-name="peas">
+
+        <div class="vegetable-photo">
+
+            <img src="https://images.unsplash.com/photo-1587735243615-c03f25aaff15?w=500"
+                alt="Fresh Green Peas">
+
+        </div>
+
+        <div class="vegetable-info">
+
+            <span class="tag">GREEN VEGETABLE</span>
+
+            <h3>Fresh Green Peas</h3>
+
+            <p>Fresh green peas for delicious dishes.</p>
+
+            <div class="vegetable-price">
+                ₹80 <small>/ 1kg</small>
+            </div>
+
+            <select class="weight-select">
+                <option value="0">250g - ₹20</option>
+                <option value="1">500g - ₹40</option>
+                <option value="2">1kg - ₹80</option>
+            </select>
+
+            <div class="vegetable-actions">
+
+                <div class="quantity">
+                    <button onclick="changeVegetableQty(this,-1)">−</button>
+                    <input type="number" value="1" min="1" max="20">
+                    <button onclick="changeVegetableQty(this,1)">+</button>
+                </div>
+
+                <button class="add-btn"
+                    onclick="addVegetable(this,'Fresh Green Peas',[20,40,80])">
+                    Add +
+                </button>
+
+            </div>
+
+        </div>
+
+    </article>
+
+</div>
+
+<p id="no-vegetable-results" hidden>
+    No vegetables found. Try another search.
+</p>
+```
+
+</section>
+
+<!-- CTA -->
+
+<section class="vegetable-cta">
+
+```
+<h2>Make Every Meal Fresh & Healthy!</h2>
+
+<p>
+    Choose your everyday vegetables and enjoy
+    convenient shopping with Fresh & Veg.
+</p>
+
+<a href="vegetables.html" class="btn btn-primary">
+    Explore All Products →
+</a>
+```
+
+</section>
+
+</main>
+
+<!-- FOOTER -->
+
+<footer class="footer">
+
+```
+<a class="brand" href="index.html">
+    🥬 fresh<span>&</span>veg
+</a>
+
+<p>Fresh choices. Healthy living.</p>
+
+<div>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="products.html">Products</a>
+    <a href="offers.html">Offers</a>
+    <a href="contact.html">Contact</a>
+</div>
+
+<small>
+    © 2026 Fresh & Veg. All Rights Reserved.
+</small>
+```
+
+</footer>
+
+<script src="script.js"></script>
+
+<script src="vegetables.js"></script>
+
+</body>
+</html>
